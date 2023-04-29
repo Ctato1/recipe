@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;900&family=Poppins:wght@200;300;400&family=Roboto&display=swap');
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background: #03001e;
+    background: -webkit-linear-gradient(to right, #fcccee, #ec38bc, #7303c0, #03001e);
+    background: linear-gradient(to right, #fdeff9, #ec38bc, #7303c0, #9d94ec);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+
+}
+
+img {
+    max-width: 100%;
+}
+
+.mobile-container {
+    background-color: #fff;
+    width: 400px;
+    box-shadow: -2px -4px 37px 3px rgba(0, 0, 0, 0.45);
+    -webkit-box-shadow: -2px -4px 37px 3px rgba(0, 0, 0, 0.45);
+    -moz-box-shadow: -2px -4px 37px 3px rgba(0, 0, 0, 0.45);
+    border-radius: 13px;
+    overflow: hidden;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+header input {
+    background-color: #eee;
+    border: none;
+    border-radius: 4px;
+    padding: .5rem 1rem;
+    color: #DE3163;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-family: inherit;
+    font-size: .9rem;
+    transition: .3s;
+}
+
+header input:focus{
+    background-color: rgba(163, 159, 159, 0.637);
+    outline: none;
+    border-radius: 10px;
+}
+
+header button {
+    background-color: transparent;
+    color: #aaa;
+    font-size: 1.3rem;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.fav-container {
+    padding: 1.5rem 1rem;
+    height: 170px;
+    text-align: center;
+    background: #C9D6FF;
+    background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);
+    background: linear-gradient(to right, #E2E2E2, #C9D6FF);
+    position: relative;
+    overflow: auto;
+}
+
+.fav-container h3 {
+    margin-top: -10px;
+    
+}
+
+.fav-meals {
+    display: flex;
+
+    list-style: none;
+    padding: 0px;
+    position: absolute;
+    top: 0;
+    margin-top: 50px;
+}
+
+.fav-meals li {
+    width: 85px;
+    margin: 0 5px;
+    position: relative;
+    cursor: pointer;
+}
+
+.fav-meals li .clear{
+    position: absolute;
+    top: -0.5rem;
+    right: -0.5rem;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.747);
+    border-radius: 50%;
+    color: rgba(255, 0, 0, 0.527);
+    font-weight: bold;
+    border: 1px solid rgba(252, 3, 3, 0.466);
+    font-size: 1.2rem;
+    opacity: 0;
+    transition: .2s;
+}
+.fav-meals li:hover .clear{
+    opacity: 1;
+}
+
+.fav-meals li:hover .clear:hover{
+    color: rgb(255, 0, 0);
+    border: transparent;
+    background-color: transparent;
+    transform: rotate(360deg);
+}
+
+.fav-meals li img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    object-fit: cover;
+}
+
+.fav-meals li span {
+    font-size: .7rem;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 85px;
+}
+
+
+
+
+
+.meal {
+    margin: 20px;
+    position: relative;
+    z-index: 0;
+    -webkit-box-shadow: -1px 1px 7px -1px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: -1px 1px 7px -1px rgba(0, 0, 0, 0.7);
+    box-shadow: -1px 1px 7px -1px rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+}
+
+.random {
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: absolute;
+    z-index: 1;
+    padding: .4rem;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.274);
+    border-left: none;
+    background-color: rgba(255, 255, 255, 0.671);
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+
+.meal-header img {
+    width: 100%;
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+
+}
+
+.meal-body {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+}
+
+.fa-heart {
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+.fav-btn {
+    color: rgb(199, 194, 194);
+    border: none;
+    background-color: transparent;
+}
+
+.active {
+    color: red;
+}
+
+
+
+.popup-container{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.popup{
+    background-color: white;
+    position: relative;
+    max-width: 600px;
+    width: 100%;
+    padding: 0 2rem;
+    border-radius: 10px;
+    height: 90vh;
+    overflow: auto;
+}
+
+.meal-info h1{
+    text-align: center;
+}
+.meal-info {
+    text-align: center;
+}
+
+
+.popup .close-popup{
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.popup-container.hidden{
+    display: none;
+}
+
+.popup{
+    transition: .2s;
+    scroll-behavior: auto;
+    background: linear-gradient(#e66465, #9198e5);
+}
+
+.popup .close-popup .fa-times{
+    position: fixed;
+}

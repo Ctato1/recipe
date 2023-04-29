@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+    <style>
+        ::-webkit-scrollbar {
+
+            height: 4px;
+            border: 1px solid #000000;
+        }
+
+        ::-webkit-scrollbar-track {
+            border-radius: 0;
+            background: #eeeeee;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            border-radius: 0;
+            background: #b8b6b6;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="mobile-container">
+        <header>
+            <input type="text" id="search-term">
+            <button id="search">
+                <i class="fas fa-search"></i>
+            </button>
+        </header>
+        <div class="fav-container">
+            <h3>Favorite Meals</h3>
+            <ul class="fav-meals" id="fav-meals"></ul>
+        </div>
+        <div class="meals" id="meals"></div>
+    </div>
+
+
+
+    <div class="popup-container hidden" id="meal-popup">
+
+        <div class="popup">
+            <button id="close-popup" class="close-popup"><i class="fas fa-times"></i></button>
+            <div class="meal-info" id="meal-info">
+        
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="https://kit.fontawesome.com/723b525d8d.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
